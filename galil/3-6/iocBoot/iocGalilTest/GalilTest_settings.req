@@ -1,0 +1,18 @@
+# scan and SaveData settings
+file standardScans_settings.req P=$(IOC)
+file saveData_settings.req P=$(IOC)
+
+# Controller settings that motorRecord does not support
+file "galil_dmc_ctrl.req" P=$(P1)
+
+# User array names
+file "galil_user_array.req" P=$(P1)
+
+# Motor record settings
+file "motor_settings.req" P=$(P1), M=A
+
+# Motor record settings not included in community req file
+file "galil_motor_settings.req" P=$(P1), M=A
+
+# Motor settings that motorRecord does not support
+file "galil_motor_extras.req" P=$(P1), M=A

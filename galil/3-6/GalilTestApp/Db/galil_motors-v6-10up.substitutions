@@ -1,0 +1,6 @@
+file "$(GALIL)/GalilSup/Db/galil_motor-v6-10up.template"
+{
+    pattern
+    {P,        M,   PORT,    ADDR, EGU, DESC, VELO,  VMAX,  ACCL,  BDST,  BVEL,  BACC,  MRES,  SREV, ERES,     PREC, DHLM,    DLLM,     OFF,     UEIP, RTRY, NTM,   PCOF, ICOF, DCOF}
+    {"DMC01:", "A", "Galil", 0,    mm,  "",   20,    20,    1,     0,     0,     5,     .0025, 1000, 0.001,    10,   42273.3, -42273.3, 0,       0,    0   , "YES", 0,    0,    0}
+}

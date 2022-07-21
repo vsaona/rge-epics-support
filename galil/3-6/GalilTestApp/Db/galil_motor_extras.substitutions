@@ -1,0 +1,22 @@
+# P - Motion device
+# M - Motor name
+# PORT - Asyn port of controller
+# ADDR - Axis number 0-7
+# PREC - Precision of analog records
+# SCAN - Scan period for monitor records.  Use passive when only epics will change value (default)
+#      - Periodic scan will slow controller update performance (poller)
+# MTRTYPE - motor type =
+#   0 - Servo
+#		1 - Reverse servo
+#		2 - High active stepper
+#		3 - Low active stepper
+#		4 - Reverse high active stepper
+#		5 - Reverse low active stepper
+# MTRON - motor off 0, motor on 1
+
+file "$(GALIL)/GalilSup/Db/galil_motor_extras.template"
+{
+    pattern
+    {P,        M,    PORT,    ADDR, PREC, SCAN,       MTRTYPE, MTRON, EGU  }
+    {"DMC01:", "A",  "Galil", 0,    3,    "Passive",  "3",     "0",   "mm" }
+}
