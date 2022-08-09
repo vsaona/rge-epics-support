@@ -30,233 +30,233 @@
 # === RG-E CODE ====================================================================================
 # Calibrated target positions. Can be displayed on GUIs along with getmotor for visual confirmation.
 # NOTE. These should be set to the calibrated motor positions once we figure them out.
-record(ai, "home") {
+record(ai, "$(P)$(M)_HOME") {
     field(VAL,"5")
 }
-record(ai, "pos1") {
+record(ai, "$(P)$(M)_POS1") {
     field(VAL,"10")
 }
-record(ai, "pos2") {
+record(ai, "$(P)$(M)_POS2") {
     field(VAL,"20")
 }
-record(ai, "pos3") {
+record(ai, "$(P)$(M)_POS3") {
     field(VAL,"30")
 }
-record(ai, "pos4") {
+record(ai, "$(P)$(M)_POS4") {
     field(VAL,"40")
 }
-record(ai, "pos5") {
+record(ai, "$(P)$(M)_POS5") {
     field(VAL,"50")
 }
-record(ai, "pos6") {
+record(ai, "$(P)$(M)_POS6") {
     field(VAL,"60")
 }
-record(ai, "pos7") {
+record(ai, "$(P)$(M)_POS7") {
     field(VAL,"70")
 }
 
 # Calibrated endpoint positions. These are used as the lower and upper limits for the motos, and a
 #     major alarm should be thrown if these are reached.
 # NOTE. These should be set to the calibrated motor positions once we figure them out.
-record(ai, "low_limit") {
+record(ai, "$(P)$(M)_LOWLIMIT") {
 	field(VAL,"0")
 }
-record(ai, "high_limit") {
+record(ai, "$(P)$(M)_HIGHLIMIT") {
 	field(VAL,"80")
 }
 
 # Commands to go to calibrated positions, for GUI buttons.
-record(ao, "go_home") {
+record(ao, "$(P)$(M)_GO_HOME") {
     field(OMSL,"closed_loop")
-    field(DOL, "home")
+    field(DOL, "$(P)$(M)_HOME")
     field(OUT, "setmotor PP") # the PP forces the output link PV to process
 }
-record(ao, "go1") {
+record(ao, "$(P)$(M)_GO_POS1") {
     field(OMSL,"closed_loop")
-    field(DOL, "pos1")
+    field(DOL, "$(P)$(M)_POS1")
     field(OUT, "setmotor PP")
 }
-record(ao, "go2") {
+record(ao, "$(P)$(M)_GO_POS2") {
     field(OMSL,"closed_loop")
-    field(DOL, "pos2")
+    field(DOL, "$(P)$(M)_POS2")
     field(OUT, "setmotor PP")
 }
-record(ao, "go3") {
+record(ao, "$(P)$(M)_GO_POS3") {
     field(OMSL,"closed_loop")
-    field(DOL, "pos3")
+    field(DOL, "$(P)$(M)_POS3")
     field(OUT, "setmotor PP")
 }
-record(ao, "go4") {
+record(ao, "$(P)$(M)_GO_POS4") {
     field(OMSL,"closed_loop")
-    field(DOL, "pos4")
+    field(DOL, "$(P)$(M)_POS4")
     field(OUT, "setmotor PP")
 }
-record(ao, "go5") {
+record(ao, "$(P)$(M)_GO_POS5") {
     field(OMSL,"closed_loop")
-    field(DOL, "pos5")
+    field(DOL, "$(P)$(M)_POS5")
     field(OUT, "setmotor PP")
 }
-record(ao, "go6") {
+record(ao, "$(P)$(M)_GO_POS6") {
     field(OMSL,"closed_loop")
-    field(DOL, "pos6")
+    field(DOL, "$(P)$(M)_POS6")
     field(OUT, "setmotor PP")
 }
-record(ao, "go7") {
+record(ao, "$(P)$(M)_GO_POS7") {
     field(OMSL,"closed_loop")
-    field(DOL, "pos7")
+    field(DOL, "$(P)$(M)_POS7")
     field(OUT, "setmotor PP")
 }
 
 # Calculate whether the band is at each of the calibrated positions.
 # NOTE. Tolerance should be set to an agreed value.
-record(ai, "tolerance") {
+record(ai, "$(P)$(M)_TOLERANCE") {
     field(VAL, "0.1")
 }
-record(calc, "at_home") {
+record(calc, "$(P)$(M)_AT_HOME") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
-    field(INPB, "home")
-    field(INPC, "tolerance")
+    field(INPB, "$(P)$(M)_HOME")
+    field(INPC, "$(P)$(M)_TOLERANCE")
     field(CALC, "ABS(A-B)<C")
 }
-record(calc, "at1") {
+record(calc, "$(P)$(M)_AT_POS1") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
-    field(INPB, "pos1")
-    field(INPC, "tolerance")
+    field(INPB, "$(P)$(M)_POS1")
+    field(INPC, "$(P)$(M)_TOLERANCE")
     field(CALC, "ABS(A-B)<C")
 }
-record(calc, "at2") {
+record(calc, "$(P)$(M)_AT_POS2") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
-    field(INPB, "pos2")
-    field(INPC, "tolerance")
+    field(INPB, "$(P)$(M)_POS2")
+    field(INPC, "$(P)$(M)_TOLERANCE")
     field(CALC, "ABS(A-B)<C")
 }
-record(calc, "at3") {
+record(calc, "$(P)$(M)_AT_POS3") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
-    field(INPB, "pos3")
-    field(INPC, "tolerance")
+    field(INPB, "$(P)$(M)_POS3")
+    field(INPC, "$(P)$(M)_TOLERANCE")
     field(CALC, "ABS(A-B)<C")
 }
-record(calc, "at4") {
+record(calc, "$(P)$(M)_AT_POS4") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
-    field(INPB, "pos4")
-    field(INPC, "tolerance")
+    field(INPB, "$(P)$(M)_POS4")
+    field(INPC, "$(P)$(M)_TOLERANCE")
     field(CALC, "ABS(A-B)<C")
 }
-record(calc, "at5") {
+record(calc, "$(P)$(M)_AT_POS5") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
-    field(INPB, "pos5")
-    field(INPC, "tolerance")
+    field(INPB, "$(P)$(M)_POS5")
+    field(INPC, "$(P)$(M)_TOLERANCE")
     field(CALC, "ABS(A-B)<C")
 }
-record(calc, "at6") {
+record(calc, "$(P)$(M)_AT_POS6") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
-    field(INPB, "pos6")
-    field(INPC, "tolerance")
+    field(INPB, "$(P)$(M)_POS6")
+    field(INPC, "$(P)$(M)_TOLERANCE")
     field(CALC, "ABS(A-B)<C")
 }
-record(calc, "at7") {
+record(calc, "$(P)$(M)_AT_POS7") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
-    field(INPB, "pos7")
-    field(INPC, "tolerance")
+    field(INPB, "$(P)$(M)_POS7")
+    field(INPC, "$(P)$(M)_TOLERANCE")
     field(CALC, "ABS(A-B)<C")
 }
 
 # Calculate whether the band has gone beyond the limits.
-record(calc, "at_low_thrd") {
+record(calc, "$(P)$(M)_AT_LOWLIMIT") {
 	field(SCAN, "1 second")
 	field(INPA, "getmotor")
-	field(INPB, "low_limit")
+	field(INPB, "$(P)$(M)_LOWLIMIT")
 	field(CALC, "A<B")
 }
-record(calc, "at_high_thrd") {
+record(calc, "$(P)$(M)_AT_HIGHLIMIT") {
 	field(SCAN, "1 second")
 	field(INPA, "getmotor")
-	field(INPB, "high_limit")
+	field(INPB, "$(P)$(M)_HIGHLIMIT")
 	field(CALC, "B<A")
 }
 
 # Calculte target type as an integer, trigger the mbbi below.
 # WARNING. CALC is silently truncated to 40 characters!!!!
-record(calc, "tgt_calc1") {
+record(calc, "$(P)$(M)_CALC_POS1") {
 	field(SCAN, "1 second")
-	field(INPA, "at1")
+	field(INPA, "$(P)$(M)_AT_POS1")
 	field(CALC, "A=1?1:0")
 	field(FLNK, "type.PROC")
 }
-record(calc, "tgt_calc2") {
+record(calc, "$(P)$(M)_CALC_POS2") {
 	field(SCAN, "1 second")
-	field(INPA, "at2")
-	field(INPB, "tgt_calc1")
+	field(INPA, "$(P)$(M)_AT_POS2")
+	field(INPB, "$(P)$(M)_CALC_POS1")
 	field(CALC, "A=1?2:B")
 	field(FLNK, "type.PROC")
 }
-record(calc, "tgt_calc3") {
+record(calc, "$(P)$(M)_CALC_POS3") {
 	field(SCAN, "1 second")
-	field(INPA, "at3")
-	field(INPB, "tgt_calc2")
+	field(INPA, "$(P)$(M)_AT_POS3")
+	field(INPB, "$(P)$(M)_CALC_POS2")
 	field(CALC, "A=1?3:B")
 	field(FLNK, "type.PROC")
 }
-record(calc, "tgt_calc4") {
+record(calc, "$(P)$(M)_CALC_POS4") {
 	field(SCAN, "1 second")
-	field(INPA, "at4")
-	field(INPB, "tgt_calc3")
+	field(INPA, "$(P)$(M)_AT_POS4")
+	field(INPB, "$(P)$(M)_CALC_POS3")
 	field(CALC, "A=1?4:B")
 	field(FLNK, "type.PROC")
 }
-record(calc, "tgt_calc5") {
+record(calc, "$(P)$(M)_CALC_POS5") {
 	field(SCAN, "1 second")
-	field(INPA, "at5")
-	field(INPB, "tgt_calc4")
+	field(INPA, "$(P)$(M)_AT_POS5")
+	field(INPB, "$(P)$(M)_CALC_POS4")
 	field(CALC, "A=1?5:B")
 	field(FLNK, "type.PROC")
 }
-record(calc, "tgt_calc6") {
+record(calc, "$(P)$(M)_CALC_POS6") {
 	field(SCAN, "1 second")
-	field(INPA, "at6")
-	field(INPB, "tgt_calc5")
+	field(INPA, "$(P)$(M)_AT_POS6")
+	field(INPB, "$(P)$(M)_CALC_POS5")
 	field(CALC, "A=1?6:B")
 	field(FLNK, "type.PROC")
 }
-record(calc, "tgt_calc7") {
+record(calc, "$(P)$(M)_CALC_POS7") {
 	field(SCAN, "1 second")
-	field(INPA, "at7")
-	field(INPB, "tgt_calc6")
+	field(INPA, "$(P)$(M)_AT_POS7")
+	field(INPB, "$(P)$(M)_CALC_POS6")
 	field(CALC, "A=1?7:B")
 	field(FLNK, "type.PROC")
 }
-record(calc, "tgt_home") {
+record(calc, "$(P)$(M)_CALC_HOME") {
 	field(SCAN, "1 second")
-	field(INPA, "at_home")
-	field(INPB, "tgt_calc7")
+	field(INPA, "$(P)$(M)_AT_HOME")
+	field(INPB, "$(P)$(M)_CALC_POS7")
 	field(CALC, "A=1?10:B")
 	field(FLNK, "type.PROC")
 }
-record(calc, "tgt_low_thrd") {
+record(calc, "$(P)$(M)_CALC_LOWLIMIT") {
 	field(SCAN, "1 second")
-	field(INPA, "at_low_thrd")
-	field(INPB, "tgt_home")
+	field(INPA, "$(P)$(M)_AT_LOWLIMIT")
+	field(INPB, "$(P)$(M)_CALC_HOME")
 	field(CALC, "A=1?11:B")
 	field(FLNK, "type.PROC")
 }
-record(calc, "tgt_high_thrd") {
+record(calc, "$(P)$(M)_CALC_HIGHLIMIT") {
 	field(SCAN, "1 second")
-	field(INPA, "at_high_thrd")
-	field(INPB, "tgt_home")
+	field(INPA, "$(P)$(M)_AT_HIGHLIMIT")
+	field(INPB, "$(P)$(M)_CALC_LOWLIMIT")
 	field(CALC, "A=1?12:B")
 	field(FLNK, "type.PROC")
 }
-record(calc, "tgt_type_calc") {
+record(calc, "$(P)$(M)_CALC_TGTTYPE") {
 	field(SCAN, "1 second")
-	field(INPA, "tgt_high_thrd")
+	field(INPA, "$(P)$(M)_CALC_HIGHLIMIT")
 	field(CALC, "A")
 	field(FLNK, "type.PROC")
 }
@@ -264,8 +264,8 @@ record(calc, "tgt_type_calc") {
 # Target type. Goes on GUIs, in RCDB, can be an alarm.
 # NOTE. Ideally, we'd want the major alarms to also trigger a stop signal like:
 #     "Write 1 to $(DMC)$(M1).STOP"
-record(mbbi, "tgt_type") {
-    field(INP,  "tgt_type_calc"
+record(mbbi, "$(P)$(M)_TGTTYPE") {
+    field(INP,  "$(P)$(M)_CALC_TGTTYPE"
 	# Field values.
     field(ZRVL,  "0")
     field(ONVL,  "1")
@@ -296,13 +296,6 @@ record(mbbi, "tgt_type") {
 	field(ELSV, "MAJOR")
 	field(TVSV, "MAJOR")
 }
-
-# TODO. Additional alarms need to be implemented:
-#   * IOC dies - Any old PV running on your IOC will do for the latter, as it will go into
-# 	      DISCONNECTED state and alarm.
-#   * Motor controller becomes unresponsive - Any PV that is polling/scanning will generate a
-#         TIMEOUT/READ alarm if it doesn't get a response from the motor controller.
-# NOTE. We may want a dedicated heartbeat PV, that sounds cleaner. How to implement?
 
 # === GALIL TEMPLATES ==============================================================================
 record(ai,"$(P)$(EPICSNAME)_MONITOR")
