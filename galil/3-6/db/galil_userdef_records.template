@@ -27,6 +27,284 @@
 # Mark Clift
 # email: padmoz@tpg.com.au
 
+# === RG-E CODE ====================================================================================
+# Calibrated target positions. Can be displayed on GUIs along with getmotor for visual confirmation.
+# NOTE. These should be set to the calibrated motor positions once we figure them out.
+record(ai, "home") {
+    field(VAL,"5")
+}
+record(ai, "pos1") {
+    field(VAL,"10")
+}
+record(ai, "pos2") {
+    field(VAL,"20")
+}
+record(ai, "pos3") {
+    field(VAL,"30")
+}
+record(ai, "pos4") {
+    field(VAL,"40")
+}
+record(ai, "pos5") {
+    field(VAL,"50")
+}
+record(ai, "pos6") {
+    field(VAL,"60")
+}
+record(ai, "pos7") {
+    field(VAL,"70")
+}
+
+# Calibrated endpoint positions. These are used as the lower and upper limits for the motos, and a
+#     major alarm should be thrown if these are reached.
+# NOTE. These should be set to the calibrated motor positions once we figure them out.
+record(ai, "low_limit") {
+	field(VAL,"0")
+}
+record(ai, "high_limit") {
+	field(VAL,"80")
+}
+
+# Commands to go to calibrated positions, for GUI buttons.
+record(ao, "go_home") {
+    field(OMSL,"closed_loop")
+    field(DOL, "home")
+    field(OUT, "setmotor PP") # the PP forces the output link PV to process
+}
+record(ao, "go1") {
+    field(OMSL,"closed_loop")
+    field(DOL, "pos1")
+    field(OUT, "setmotor PP")
+}
+record(ao, "go2") {
+    field(OMSL,"closed_loop")
+    field(DOL, "pos2")
+    field(OUT, "setmotor PP")
+}
+record(ao, "go3") {
+    field(OMSL,"closed_loop")
+    field(DOL, "pos3")
+    field(OUT, "setmotor PP")
+}
+record(ao, "go4") {
+    field(OMSL,"closed_loop")
+    field(DOL, "pos4")
+    field(OUT, "setmotor PP")
+}
+record(ao, "go5") {
+    field(OMSL,"closed_loop")
+    field(DOL, "pos5")
+    field(OUT, "setmotor PP")
+}
+record(ao, "go6") {
+    field(OMSL,"closed_loop")
+    field(DOL, "pos6")
+    field(OUT, "setmotor PP")
+}
+record(ao, "go7") {
+    field(OMSL,"closed_loop")
+    field(DOL, "pos7")
+    field(OUT, "setmotor PP")
+}
+
+# Calculate whether the band is at each of the calibrated positions.
+# NOTE. Tolerance should be set to an agreed value.
+record(ai, "tolerance") {
+    field(VAL, "0.1")
+}
+record(calc, "at_home") {
+    field(SCAN, "1 second")
+    field(INPA, "getmotor")
+    field(INPB, "home")
+    field(INPC, "tolerance")
+    field(CALC, "ABS(A-B)<C")
+}
+record(calc, "at1") {
+    field(SCAN, "1 second")
+    field(INPA, "getmotor")
+    field(INPB, "pos1")
+    field(INPC, "tolerance")
+    field(CALC, "ABS(A-B)<C")
+}
+record(calc, "at2") {
+    field(SCAN, "1 second")
+    field(INPA, "getmotor")
+    field(INPB, "pos2")
+    field(INPC, "tolerance")
+    field(CALC, "ABS(A-B)<C")
+}
+record(calc, "at3") {
+    field(SCAN, "1 second")
+    field(INPA, "getmotor")
+    field(INPB, "pos3")
+    field(INPC, "tolerance")
+    field(CALC, "ABS(A-B)<C")
+}
+record(calc, "at4") {
+    field(SCAN, "1 second")
+    field(INPA, "getmotor")
+    field(INPB, "pos4")
+    field(INPC, "tolerance")
+    field(CALC, "ABS(A-B)<C")
+}
+record(calc, "at5") {
+    field(SCAN, "1 second")
+    field(INPA, "getmotor")
+    field(INPB, "pos5")
+    field(INPC, "tolerance")
+    field(CALC, "ABS(A-B)<C")
+}
+record(calc, "at6") {
+    field(SCAN, "1 second")
+    field(INPA, "getmotor")
+    field(INPB, "pos6")
+    field(INPC, "tolerance")
+    field(CALC, "ABS(A-B)<C")
+}
+record(calc, "at7") {
+    field(SCAN, "1 second")
+    field(INPA, "getmotor")
+    field(INPB, "pos7")
+    field(INPC, "tolerance")
+    field(CALC, "ABS(A-B)<C")
+}
+
+# Calculate whether the band has gone beyond the limits.
+record(calc, "at_low_thrd") {
+	field(SCAN, "1 second")
+	field(INPA, "getmotor")
+	field(INPB, "low_limit")
+	field(CALC, "A<B")
+}
+record(calc, "at_high_thrd") {
+	field(SCAN, "1 second")
+	field(INPA, "getmotor")
+	field(INPB, "high_limit")
+	field(CALC, "B<A")
+}
+
+# Calculte target type as an integer, trigger the mbbi below.
+# WARNING. CALC is silently truncated to 40 characters!!!!
+record(calc, "tgt_calc1") {
+	field(SCAN, "1 second")
+	field(INPA, "at1")
+	field(CALC, "A=1?1:0")
+	field(FLNK, "type.PROC")
+}
+record(calc, "tgt_calc2") {
+	field(SCAN, "1 second")
+	field(INPA, "at2")
+	field(INPB, "tgt_calc1")
+	field(CALC, "A=1?2:B")
+	field(FLNK, "type.PROC")
+}
+record(calc, "tgt_calc3") {
+	field(SCAN, "1 second")
+	field(INPA, "at3")
+	field(INPB, "tgt_calc2")
+	field(CALC, "A=1?3:B")
+	field(FLNK, "type.PROC")
+}
+record(calc, "tgt_calc4") {
+	field(SCAN, "1 second")
+	field(INPA, "at4")
+	field(INPB, "tgt_calc3")
+	field(CALC, "A=1?4:B")
+	field(FLNK, "type.PROC")
+}
+record(calc, "tgt_calc5") {
+	field(SCAN, "1 second")
+	field(INPA, "at5")
+	field(INPB, "tgt_calc4")
+	field(CALC, "A=1?5:B")
+	field(FLNK, "type.PROC")
+}
+record(calc, "tgt_calc6") {
+	field(SCAN, "1 second")
+	field(INPA, "at6")
+	field(INPB, "tgt_calc5")
+	field(CALC, "A=1?6:B")
+	field(FLNK, "type.PROC")
+}
+record(calc, "tgt_calc7") {
+	field(SCAN, "1 second")
+	field(INPA, "at7")
+	field(INPB, "tgt_calc6")
+	field(CALC, "A=1?7:B")
+	field(FLNK, "type.PROC")
+}
+record(calc, "tgt_home") {
+	field(SCAN, "1 second")
+	field(INPA, "at_home")
+	field(INPB, "tgt_calc7")
+	field(CALC, "A=1?10:B")
+	field(FLNK, "type.PROC")
+}
+record(calc, "tgt_low_thrd") {
+	field(SCAN, "1 second")
+	field(INPA, "at_low_thrd")
+	field(INPB, "tgt_home")
+	field(CALC, "A=1?11:B")
+	field(FLNK, "type.PROC")
+}
+record(calc, "tgt_high_thrd") {
+	field(SCAN, "1 second")
+	field(INPA, "at_high_thrd")
+	field(INPB, "tgt_home")
+	field(CALC, "A=1?12:B")
+	field(FLNK, "type.PROC")
+}
+record(calc, "tgt_type_calc") {
+	field(SCAN, "1 second")
+	field(INPA, "tgt_high_thrd")
+	field(CALC, "A")
+	field(FLNK, "type.PROC")
+}
+
+# Target type. Goes on GUIs, in RCDB, can be an alarm.
+# NOTE. Ideally, we'd want the major alarms to also trigger a stop signal like:
+#     "Write 1 to $(DMC)$(M1).STOP"
+record(mbbi, "tgt_type") {
+    field(INP,  "tgt_type_calc"
+	# Field values.
+    field(ZRVL,  "0")
+    field(ONVL,  "1")
+    field(TWVL,  "2")
+	field(THVL,  "3")
+	field(FRVL,  "4")
+	field(FVVL,  "5")
+	field(SXVL,  "6")
+	field(SVVL,  "7")
+	field(TEVL, "10")
+	field(ELVL, "11")
+	field(TVVL, "12")
+	# Field strings.
+    field(ZRST, "Unknown")
+    field(ONST, "Target 1")
+    field(TWST, "Target 2")
+	field(THST, "Target 3")
+	field(FRST, "Target 4")
+	field(FVST, "Target 5")
+	field(SXST, "Target 6")
+	field(SVST, "Target 7")
+	field(TEST, "Home")
+	field(ELST, "Low Threshold")
+	field(TVST, "High Threshold")
+	# Alarm severity.
+	# NOTE. Default severity is NO_ALARM, so no need to set target states.
+    field(ZRSV, "MINOR")
+	field(ELSV, "MAJOR")
+	field(TVSV, "MAJOR")
+}
+
+# TODO. Additional alarms need to be implemented:
+#   * IOC dies - Any old PV running on your IOC will do for the latter, as it will go into
+# 	      DISCONNECTED state and alarm.
+#   * Motor controller becomes unresponsive - Any PV that is polling/scanning will generate a
+#         TIMEOUT/READ alarm if it doesn't get a response from the motor controller.
+# NOTE. We may want a dedicated heartbeat PV, that sounds cleaner. How to implement?
+
+# === GALIL TEMPLATES ==============================================================================
 record(ai,"$(P)$(EPICSNAME)_MONITOR")
 {
 	field(DESC,"$(EPICSNAME) monitor")
@@ -63,20 +341,20 @@ record(ao,"$(P)$(EPICSNAME)_SP")
 {
 	field(DESC,"$(EPICSNAME) setpoint")
 	field(DTYP,"asynFloat64")
-	
+
 	field(EGU, "$(EGU)")
 	field(DOL, "$(P)$(EPICSNAME)_SP")
 	field(FLNK,"$(P)$(EPICSNAME)_MONITOR")
 	field(PINI,"$(PINI)")
 	field(OUT, "@asyn($(PORT),$(ADDR))USER_$(DRVCMD) $(GALILSTR)")
-	
+
 # Set default value here.
 	field(VAL, "$(DEFAULT)")
 
 # Drive thresholds
 	field(DRVH, "$(DRVH)")
  	field(DRVL, "$(DRVL)")
- 
+
 # Alarm thresholds
  	field(LOW,  "$(LOW)")
  	field(LSV,  "$(LSV)")
