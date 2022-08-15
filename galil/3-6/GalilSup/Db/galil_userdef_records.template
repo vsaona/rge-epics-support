@@ -27,7 +27,6 @@
 # Mark Clift
 # email: padmoz@tpg.com.au
 
-# === RG-E CODE ====================================================================================
 # Calibrated target positions. Can be displayed on GUIs along with getmotor for visual confirmation.
 # NOTE. These should be set to the calibrated motor positions once we figure them out.
 record(ai, "$(P)$(M)_home") {
@@ -262,11 +261,9 @@ record(calc, "$(P)$(M)_calc_tgttype") {
 }
 
 # Target type. Goes on GUIs, in RCDB, can be an alarm.
-# NOTE. Ideally, we'd want the major alarms to also trigger a stop signal like:
-#     "Write 1 to $(DMC)$(M1).STOP"
+# NOTE. Ideally, we'd want the major alarms to also trigger a stop signal to stop the motor.
 record(mbbi, "$(P)$(M)_tgttype") {
     field(INP,  "$(P)$(M)_calc_tgttype"
-	# Field values.
     field(ZRVL,  "0")
     field(ONVL,  "1")
     field(TWVL,  "2")
@@ -278,7 +275,6 @@ record(mbbi, "$(P)$(M)_tgttype") {
 	field(TEVL, "10")
 	field(ELVL, "11")
 	field(TVVL, "12")
-	# Field strings.
     field(ZRST, "Unknown")
     field(ONST, "Target 1")
     field(TWST, "Target 2")
@@ -290,8 +286,6 @@ record(mbbi, "$(P)$(M)_tgttype") {
 	field(TEST, "Home")
 	field(ELST, "Low Limit")
 	field(TVST, "High Limit")
-	# Alarm severity.
-	# NOTE. Default severity is NO_ALARM, so no need to set target states.
     field(ZRSV, "MINOR")
 	field(ELSV, "MAJOR")
 	field(TVSV, "MAJOR")
