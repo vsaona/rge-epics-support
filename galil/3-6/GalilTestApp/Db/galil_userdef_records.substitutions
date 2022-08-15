@@ -21,6 +21,6 @@
 file "$(GALIL)/GalilSup/Db/galil_userdef_records.template"
 {
     pattern
-    {P,                PORT,    ADDR, EPICSNAME, GALILSTR, DRVCMD, SCAN,       DRVL, DRVH, LOW,  HIGH, LSV,     HSV,     ZNAM,      ONAM,  ZSV,      OSV,        DEFAULT, EGU,  PINI }
-    {"SR08ID01WFS01:", "Galil", 0,    "BEGIN",   "begin",  "VAR",  "I/O Intr", 0,    1,    0,    1,    "MINOR", "MINOR", "Invalid", "Ok",  "MAJOR",  "NO_ALARM", "10",    "",   "YES"}
+    {P,        M,   PORT,    ADDR, PREC, SCAN,      MTRTYPE, MTRON, EGU  }
+    {"DMC01:", "A", "Galil", 0,    3,   "Passive",  "3",     "0",   "mm" }
 }
