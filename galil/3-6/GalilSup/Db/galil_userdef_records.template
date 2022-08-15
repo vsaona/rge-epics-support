@@ -27,6 +27,12 @@
 # Mark Clift
 # email: padmoz@tpg.com.au
 
+# TODO. Everything here needs testing!
+# Motor position.
+record(ai, "$(P)$(M)_curr_pos") {
+	field(INP, "getmotor")
+}
+
 # Calibrated target positions. Can be displayed on GUIs along with getmotor for visual confirmation.
 # NOTE. These should be set to the calibrated motor positions once we figure them out.
 record(ai, "$(P)$(M)_home") {
@@ -65,10 +71,11 @@ record(ai, "$(P)$(M)_highlimit") {
 }
 
 # Commands to go to calibrated positions, for GUI buttons.
+# NOTE. The PP forces the output link PV to process.
 record(ao, "$(P)$(M)_go_home") {
     field(OMSL,"closed_loop")
     field(DOL, "$(P)$(M)_home")
-    field(OUT, "setmotor PP") # the PP forces the output link PV to process
+    field(OUT, "setmotor PP")
 }
 record(ao, "$(P)$(M)_go_pos1") {
     field(OMSL,"closed_loop")
