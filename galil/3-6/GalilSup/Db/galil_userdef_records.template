@@ -114,157 +114,99 @@ record(ao, "$(P)$(M)_go_pos7") {
 }
 
 # Calculate whether the band is at each of the calibrated positions.
+# WARNING. CALC is silently truncated to 40 characters!!!!
 # NOTE. Tolerance should be set to an agreed value.
 record(ai, "$(P)$(M)_tolerance") {
     field(VAL, "0.1")
-}
-record(calc, "$(P)$(M)_at_home") {
-    field(SCAN, "1 second")
-    field(INPA, "getmotor")
-    field(INPB, "$(P)$(M)_home")
-    field(INPC, "$(P)$(M)_tolerance")
-    field(CALC, "ABS(A-B)<C")
 }
 record(calc, "$(P)$(M)_at_pos1") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
     field(INPB, "$(P)$(M)_pos1")
     field(INPC, "$(P)$(M)_tolerance")
-    field(CALC, "ABS(A-B)<C")
+    field(CALC, "ABS(A-B)<C ? 1 : 0")
 }
 record(calc, "$(P)$(M)_at_pos2") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
     field(INPB, "$(P)$(M)_pos2")
     field(INPC, "$(P)$(M)_tolerance")
-    field(CALC, "ABS(A-B)<C")
+    field(CALC, "ABS(A-B)<C ? 2 : 0")
 }
 record(calc, "$(P)$(M)_at_pos3") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
     field(INPB, "$(P)$(M)_pos3")
     field(INPC, "$(P)$(M)_tolerance")
-    field(CALC, "ABS(A-B)<C")
+    field(CALC, "ABS(A-B)<C ? 3 : 0")
 }
 record(calc, "$(P)$(M)_at_pos4") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
     field(INPB, "$(P)$(M)_pos4")
     field(INPC, "$(P)$(M)_tolerance")
-    field(CALC, "ABS(A-B)<C")
+    field(CALC, "ABS(A-B)<C ? 4 : 0")
 }
 record(calc, "$(P)$(M)_at_pos5") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
     field(INPB, "$(P)$(M)_pos5")
     field(INPC, "$(P)$(M)_tolerance")
-    field(CALC, "ABS(A-B)<C")
+    field(CALC, "ABS(A-B)<C ? 5 : 0")
 }
 record(calc, "$(P)$(M)_at_pos6") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
     field(INPB, "$(P)$(M)_pos6")
     field(INPC, "$(P)$(M)_tolerance")
-    field(CALC, "ABS(A-B)<C")
+    field(CALC, "ABS(A-B)<C ? 6 : 0")
 }
 record(calc, "$(P)$(M)_at_pos7") {
     field(SCAN, "1 second")
     field(INPA, "getmotor")
     field(INPB, "$(P)$(M)_pos7")
     field(INPC, "$(P)$(M)_tolerance")
-    field(CALC, "ABS(A-B)<C")
+    field(CALC, "ABS(A-B)<C ? 7 : 0")
+}
+record(calc, "$(P)$(M)_at_home") {
+    field(SCAN, "1 second")
+    field(INPA, "getmotor")
+    field(INPB, "$(P)$(M)_home")
+    field(INPC, "$(P)$(M)_tolerance")
+    field(CALC, "ABS(A-B)<C ? 10 : 0")
 }
 
-# Calculate whether the band has gone beyond the limits.
+# Check whether the band has gone beyond the limits.
 record(calc, "$(P)$(M)_at_lowlimit") {
 	field(SCAN, "1 second")
 	field(INPA, "getmotor")
 	field(INPB, "$(P)$(M)_lowlimit")
-	field(CALC, "A<B")
+	field(CALC, "A<B ? 11 : 0")
 }
 record(calc, "$(P)$(M)_at_highlimit") {
 	field(SCAN, "1 second")
 	field(INPA, "getmotor")
 	field(INPB, "$(P)$(M)_highlimit")
-	field(CALC, "B<A")
+	field(CALC, "B<A ? 12 : 0")
 }
 
-# Calculte target type as an integer, trigger the mbbi below.
-# WARNING. CALC is silently truncated to 40 characters!!!!
-record(calc, "$(P)$(M)_calc_pos1") {
+# Select target type as an integer, trigger the mbbi below.
+# NOTE. This record will return the highest value between the previously defined CALCs. This assumes
+# 		that *no more than one calc is greater than 0*. This should always be the case, unless tol-
+#       erance is set too high.
+record(sel, "$(P)$(M)_sel_tgttype") {
 	field(SCAN, "1 second")
 	field(INPA, "$(P)$(M)_at_pos1")
-	field(CALC, "A=1?1:0")
-	field(FLNK, "type.PROC")
-}
-record(calc, "$(P)$(M)_calc_pos2") {
-	field(SCAN, "1 second")
-	field(INPA, "$(P)$(M)_at_pos2")
-	field(INPB, "$(P)$(M)_calc_pos1")
-	field(CALC, "A=1?2:B")
-	field(FLNK, "type.PROC")
-}
-record(calc, "$(P)$(M)_calc_pos3") {
-	field(SCAN, "1 second")
-	field(INPA, "$(P)$(M)_at_pos3")
-	field(INPB, "$(P)$(M)_calc_pos2")
-	field(CALC, "A=1?3:B")
-	field(FLNK, "type.PROC")
-}
-record(calc, "$(P)$(M)_calc_pos4") {
-	field(SCAN, "1 second")
-	field(INPA, "$(P)$(M)_at_pos4")
-	field(INPB, "$(P)$(M)_calc_pos3")
-	field(CALC, "A=1?4:B")
-	field(FLNK, "type.PROC")
-}
-record(calc, "$(P)$(M)_calc_pos5") {
-	field(SCAN, "1 second")
-	field(INPA, "$(P)$(M)_at_pos5")
-	field(INPB, "$(P)$(M)_calc_pos4")
-	field(CALC, "A=1?5:B")
-	field(FLNK, "type.PROC")
-}
-record(calc, "$(P)$(M)_calc_pos6") {
-	field(SCAN, "1 second")
-	field(INPA, "$(P)$(M)_at_pos6")
-	field(INPB, "$(P)$(M)_calc_pos5")
-	field(CALC, "A=1?6:B")
-	field(FLNK, "type.PROC")
-}
-record(calc, "$(P)$(M)_calc_pos7") {
-	field(SCAN, "1 second")
-	field(INPA, "$(P)$(M)_at_pos7")
-	field(INPB, "$(P)$(M)_calc_pos6")
-	field(CALC, "A=1?7:B")
-	field(FLNK, "type.PROC")
-}
-record(calc, "$(P)$(M)_calc_home") {
-	field(SCAN, "1 second")
-	field(INPA, "$(P)$(M)_at_home")
-	field(INPB, "$(P)$(M)_calc_pos7")
-	field(CALC, "A=1?10:B")
-	field(FLNK, "type.PROC")
-}
-record(calc, "$(P)$(M)_calc_lowlimit") {
-	field(SCAN, "1 second")
-	field(INPA, "$(P)$(M)_at_lowlimit")
-	field(INPB, "$(P)$(M)_calc_home")
-	field(CALC, "A=1?11:B")
-	field(FLNK, "type.PROC")
-}
-record(calc, "$(P)$(M)_calc_highlimit") {
-	field(SCAN, "1 second")
-	field(INPA, "$(P)$(M)_at_highlimit")
-	field(INPB, "$(P)$(M)_calc_lowlimit")
-	field(CALC, "A=1?12:B")
-	field(FLNK, "type.PROC")
-}
-record(calc, "$(P)$(M)_calc_tgttype") {
-	field(SCAN, "1 second")
-	field(INPA, "$(P)$(M)_calc_highlimit")
-	field(CALC, "A")
-	field(FLNK, "type.PROC")
+	field(INPB, "$(P)$(M)_at_pos2")
+	field(INPC, "$(P)$(M)_at_pos3")
+	field(INPD, "$(P)$(M)_at_pos4")
+	field(INPE, "$(P)$(M)_at_pos5")
+	field(INPF, "$(P)$(M)_at_pos6")
+	field(INPG, "$(P)$(M)_at_pos7")
+	field(INPH, "$(P)$(M)_at_home")
+	field(INPI, "$(P)$(M)_at_lowlimit")
+	field(INPJ, "$(P)$(M)_at_highlimit")
+	field(FLNK, "$(P)$(M)_tgttype")
 }
 
 # Target type. Goes on GUIs, in RCDB, can be an alarm.
@@ -272,28 +214,28 @@ record(calc, "$(P)$(M)_calc_tgttype") {
 record(mbbi, "$(P)$(M)_tgttype") {
     field(INP,  "$(P)$(M)_calc_tgttype"
     field(ZRVL,  "0")
+	field(ZRST, "Unknown")
+	field(ZRSV, "MINOR")
     field(ONVL,  "1")
+	field(ONST, "Target 1")
     field(TWVL,  "2")
+	field(TWST, "Target 2")
 	field(THVL,  "3")
-	field(FRVL,  "4")
-	field(FVVL,  "5")
-	field(SXVL,  "6")
-	field(SVVL,  "7")
-	field(TEVL, "10")
-	field(ELVL, "11")
-	field(TVVL, "12")
-    field(ZRST, "Unknown")
-    field(ONST, "Target 1")
-    field(TWST, "Target 2")
 	field(THST, "Target 3")
+	field(FRVL,  "4")
 	field(FRST, "Target 4")
+	field(FVVL,  "5")
 	field(FVST, "Target 5")
+	field(SXVL,  "6")
 	field(SXST, "Target 6")
+	field(SVVL,  "7")
 	field(SVST, "Target 7")
+	field(TEVL, "10")
 	field(TEST, "Home")
+	field(ELVL, "11")
 	field(ELST, "Low Limit")
-	field(TVST, "High Limit")
-    field(ZRSV, "MINOR")
 	field(ELSV, "MAJOR")
+	field(TVVL, "12")
+	field(TVST, "High Limit")
 	field(TVSV, "MAJOR")
 }
