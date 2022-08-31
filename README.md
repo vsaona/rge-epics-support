@@ -97,3 +97,14 @@ The PVs specific to the target can be found on the `$EPICS_BASE/support/galil/3-
 | IOC comm. error        | `IOC01:SR_i_am_alive  =  0` | Major        |
 
 *For further details, check the double target engineering notes.*
+
+## Raspi at JLab
+To `ssh` to the raspi at jlab, use
+
+    ssh -o ProxyJump=<user>@login.jlab.org -X pi@b-rgetgt-raspi
+
+In addition, to configure the CSS GUI, you can connect to clons12 with
+
+    ssh -L 5905:localhost:5968 <user>@hallgw.jlab.org -t ssh -L 5968:localhost:5905 clasrun@clonsl2
+
+to then connect via a vnc of your choice.
