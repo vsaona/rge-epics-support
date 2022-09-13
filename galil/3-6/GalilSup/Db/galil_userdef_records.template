@@ -217,9 +217,9 @@ record(sel, "$(P)$(M)_sel_tgttype") {
 # Target type. Goes on GUIs, in RCDB, can be an alarm.
 # NOTE. Ideally, we'd want the major alarms to also trigger a stop signal to stop the motor.
 record(mbbi, "$(P)$(M)_tgttype") {
-    field(INP,  "$(P)$(M)_calc_tgttype")
+    field(INP,  "$(P)$(M)_sel_tgttype")
     field(ZRVL, "0")
-	field(ZRST, "Unknown")
+	field(ZRST, "Not Moving")
 	field(ZRSV, "MAJOR")
     field(ONVL,  "1")
 	field(ONST, "Target 1")
