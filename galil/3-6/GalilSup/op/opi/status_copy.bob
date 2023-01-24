@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>galil_dmc_ctrl</name>
+  <x>869</x>
+  <y>534</y>
+  <width>410</width>
+  <height>300</height>
+  <background_color>
+    <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="textupdate" version="2.0.0">
+    <name>driver version</name>
+    <pv_name>${P}DRIVER_MON</pv_name>
+    <x>290</x>
+    <y>20</y>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>controller model</name>
+    <pv_name>${P}MODEL_MON</pv_name>
+    <x>290</x>
+    <y>49</y>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>controller address</name>
+    <pv_name>${P}ADDRESS_MON</pv_name>
+    <x>290</x>
+    <y>72</y>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>controller address_1</name>
+    <pv_name>${P}COMMERR_STATUS</pv_name>
+    <x>290</x>
+    <y>92</y>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>controller address_2</name>
+    <pv_name>${P}START_STATUS</pv_name>
+    <x>290</x>
+    <y>114</y>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>controller address_3</name>
+    <pv_name>${P}ECATCAPABLE_STATUS</pv_name>
+    <x>290</x>
+    <y>133</y>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>controller address_4</name>
+    <pv_name>${P}HOMETYPE_STATUS</pv_name>
+    <x>290</x>
+    <y>171</y>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>controller address_5</name>
+    <pv_name>${P}LIMITTYPE_STATUS</pv_name>
+    <x>290</x>
+    <y>151</y>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Home type</name>
+    <pv_name>${P}HOMETYPE_CMD</pv_name>
+    <x>165</x>
+    <y>150</y>
+    <height>20</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color name="Background" red="255" green="255" blue="255">
+      </color>
+    </selected_color>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Home type_1</name>
+    <pv_name>${P}HOMETYPE_CMD</pv_name>
+    <x>165</x>
+    <y>171</y>
+    <height>20</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color name="Background" red="255" green="255" blue="255">
+      </color>
+    </selected_color>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Home type_2</name>
+    <pv_name>${P}ECATNETWORK_CMD</pv_name>
+    <x>165</x>
+    <y>194</y>
+    <height>20</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <selected_color>
+      <color name="Background" red="255" green="255" blue="255">
+      </color>
+    </selected_color>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>controller address_6</name>
+    <pv_name>${P}ECATNETWORK_STATUS</pv_name>
+    <x>292</x>
+    <y>196</y>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>${P}SEND_STR_CMD</pv_name>
+    <x>30</x>
+    <y>250</y>
+    <width>365</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>${P}SEND_STR_MON</pv_name>
+    <x>30</x>
+    <y>275</y>
+    <width>355</width>
+    <format>6</format>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>${P}ERROR_MON</pv_name>
+    <x>75</x>
+    <y>220</y>
+    <width>290</width>
+  </widget>
+</display>
