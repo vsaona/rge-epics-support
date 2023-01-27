@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>galil_amp</name>
+  <x>299</x>
+  <y>172</y>
+  <width>400</width>
+  <height>142</height>
+  <background_color>
+    <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <x>92</x>
+    <y>7</y>
+    <width>209</width>
+    <height>25</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container</name>
+    <x>8</x>
+    <y>81</y>
+    <width>347</width>
+    <height>54</height>
+    <style>3</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>Low current mode</text>
+      <y>36</y>
+      <width>69</width>
+      <height>13</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="7.920792079207921">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input</name>
+      <pv_name>$(P)$(M)_AMPLC_SP</pv_name>
+      <x>142</x>
+      <y>36</y>
+      <height>18</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="10.891089108910892">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P)$(M)_AMPLC_MON</pv_name>
+      <x>266</x>
+      <y>40</y>
+      <width>81</width>
+      <height>13</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="7.920792079207921">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>Amplifier gain</text>
+      <width>69</width>
+      <height>13</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="7.920792079207921">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Menu Button</name>
+      <pv_name>$(P)$(M)_AMPGAIN_CMD</pv_name>
+      <x>142</x>
+      <height>18</height>
+      <foreground_color>
+        <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P)$(M)_AMPGAIN_STATUS</pv_name>
+      <x>266</x>
+      <y>5</y>
+      <width>81</width>
+      <height>13</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="7.920792079207921">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>Current loop gain</text>
+      <y>17</y>
+      <width>69</width>
+      <height>13</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="7.920792079207921">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Menu Button</name>
+      <pv_name>$(P)$(M)_AMPCLGAIN_CMD</pv_name>
+      <x>142</x>
+      <y>17</y>
+      <height>18</height>
+      <foreground_color>
+        <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P)$(M)_AMPCLGAIN_STATUS</pv_name>
+      <x>266</x>
+      <y>22</y>
+      <width>81</width>
+      <height>13</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="7.920792079207921">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>1</format>
+      <precision>2</precision>
+      <show_units>false</show_units>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Galil amplifier settings</text>
+    <x>99</x>
+    <y>12</y>
+    <width>193</width>
+    <height>18</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="10.891089108910892">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Motor axis</text>
+    <x>8</x>
+    <y>46</y>
+    <width>97</width>
+    <height>13</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)$(M)_AXIS_STATUS</pv_name>
+    <x>150</x>
+    <y>48</y>
+    <width>58</width>
+    <height>13</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>6</format>
+    <show_units>false</show_units>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)$(M).NAME</pv_name>
+    <x>150</x>
+    <y>65</y>
+    <width>200</width>
+    <height>13</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Motorname</text>
+    <x>8</x>
+    <y>64</y>
+    <width>97</width>
+    <height>13</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>

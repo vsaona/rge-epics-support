@@ -1,0 +1,2913 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>galil_motor_extras</name>
+  <x>567</x>
+  <y>51</y>
+  <width>456</width>
+  <height>672</height>
+  <background_color>
+    <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <x>114</x>
+    <y>13</y>
+    <width>200</width>
+    <height>28</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container</name>
+    <x>3</x>
+    <y>453</y>
+    <width>398</width>
+    <height>219</height>
+    <style>3</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>57</y>
+      <width>398</width>
+      <height>162</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="group" version="2.0.0">
+        <name>Grouping Container</name>
+        <y>19</y>
+        <width>398</width>
+        <height>143</height>
+        <style>3</style>
+        <foreground_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+        <actions>
+        </actions>
+        <widget type="label" version="2.0.0">
+          <name>Label</name>
+          <text>Use switch when homing</text>
+          <y>2</y>
+          <width>69</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label</name>
+          <text>Use index when homing</text>
+          <y>19</y>
+          <width>69</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label</name>
+          <text>Jog after home</text>
+          <y>37</y>
+          <width>69</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label</name>
+          <text>Jog after home to (User)</text>
+          <y>56</y>
+          <width>69</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label</name>
+          <text>Servo velocity (EGU/s)</text>
+          <y>130</y>
+          <width>69</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label</name>
+          <text>Servo velocity (cts/s)</text>
+          <y>112</y>
+          <width>69</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label</name>
+          <text>User data deadband</text>
+          <y>75</y>
+          <width>69</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label</name>
+          <text>User data</text>
+          <y>93</y>
+          <width>97</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update</name>
+          <pv_name>$(P)$(M)_USWITCH_STATUS</pv_name>
+          <x>317</x>
+          <y>2</y>
+          <width>81</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update</name>
+          <pv_name>$(P)$(M)_UINDEX_STATUS</pv_name>
+          <x>317</x>
+          <y>19</y>
+          <width>81</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update</name>
+          <pv_name>$(P)$(M)_JAH_STATUS</pv_name>
+          <x>317</x>
+          <y>37</y>
+          <width>81</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update</name>
+          <pv_name>$(P)$(M)_JAHV_MON</pv_name>
+          <x>317</x>
+          <y>54</y>
+          <width>81</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update</name>
+          <pv_name>$(P)$(M)_VELOCITYEGU_MON</pv_name>
+          <x>317</x>
+          <y>128</y>
+          <width>81</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update</name>
+          <pv_name>$(P)$(M)_VELOCITYRAW_MON</pv_name>
+          <x>317</x>
+          <y>111</y>
+          <width>81</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update</name>
+          <pv_name>$(P)$(M)_USERDATA_MON</pv_name>
+          <x>317</x>
+          <y>95</y>
+          <width>58</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="choice" version="2.0.0">
+          <name>Choice Button</name>
+          <pv_name>$(P)$(M)_USWITCH_CMD</pv_name>
+          <x>172</x>
+          <width>135</width>
+          <height>18</height>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+            </color>
+          </background_color>
+          <selected_color>
+            <color red="255" green="255" blue="255">
+            </color>
+          </selected_color>
+          <actions>
+          </actions>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <items>
+            <item>Choice 1</item>
+            <item>Choice 2</item>
+            <item>Choice 3</item>
+          </items>
+        </widget>
+        <widget type="choice" version="2.0.0">
+          <name>Choice Button</name>
+          <pv_name>$(P)$(M)_UINDEX_CMD</pv_name>
+          <x>172</x>
+          <y>17</y>
+          <width>135</width>
+          <height>18</height>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+            </color>
+          </background_color>
+          <selected_color>
+            <color red="255" green="255" blue="255">
+            </color>
+          </selected_color>
+          <actions>
+          </actions>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <items>
+            <item>Choice 1</item>
+            <item>Choice 2</item>
+            <item>Choice 3</item>
+          </items>
+        </widget>
+        <widget type="textentry" version="3.0.0">
+          <name>Text Input</name>
+          <pv_name>$(P)$(M)_JAHV_SP</pv_name>
+          <x>172</x>
+          <y>53</y>
+          <width>135</width>
+          <height>19</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="10.891089108910892">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <actions>
+          </actions>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="textentry" version="3.0.0">
+          <name>Text Input</name>
+          <pv_name>$(P)$(M)_USERDATADEADB_SP</pv_name>
+          <x>172</x>
+          <y>72</y>
+          <width>135</width>
+          <height>19</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="10.891089108910892">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <actions>
+          </actions>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="choice" version="2.0.0">
+          <name>Choice Button</name>
+          <pv_name>$(P)$(M)_JAH_CMD</pv_name>
+          <x>172</x>
+          <y>35</y>
+          <width>135</width>
+          <height>18</height>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+            </color>
+          </background_color>
+          <selected_color>
+            <color red="255" green="255" blue="255">
+            </color>
+          </selected_color>
+          <actions>
+          </actions>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <items>
+            <item>Choice 1</item>
+            <item>Choice 2</item>
+            <item>Choice 3</item>
+          </items>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Grouping Container</name>
+        <width>398</width>
+        <height>20</height>
+        <style>3</style>
+        <foreground_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+        <actions>
+        </actions>
+        <widget type="combo" version="2.0.0">
+          <name>Menu Button</name>
+          <pv_name>$(P)$(M)_HOMEALLOWED_CMD</pv_name>
+          <x>173</x>
+          <width>135</width>
+          <height>20</height>
+          <background_color>
+            <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+            </color>
+          </background_color>
+          <actions>
+          </actions>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label</name>
+          <text>Home allowed</text>
+          <y>2</y>
+          <width>69</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update</name>
+          <pv_name>$(P)$(M)_HOMEALLOWED_STATUS</pv_name>
+          <x>317</x>
+          <y>3</y>
+          <width>81</width>
+          <height>13</height>
+          <font>
+            <font family="Sans" style="REGULAR" size="7.920792079207921">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+            </color>
+          </background_color>
+          <show_units>false</show_units>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+          <border_color>
+            <color red="0" green="128" blue="255">
+            </color>
+          </border_color>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>Step smooth factor</text>
+      <y>2</y>
+      <width>89</width>
+      <height>13</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="7.920792079207921">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>EGU after limit</text>
+      <y>20</y>
+      <width>69</width>
+      <height>13</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="7.920792079207921">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P)$(M)_STEPSMOOTH_MON</pv_name>
+      <x>317</x>
+      <y>1</y>
+      <width>58</width>
+      <height>13</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="7.920792079207921">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P)$(M)_EGUAFTLIMIT_MON</pv_name>
+      <x>317</x>
+      <y>19</y>
+      <width>81</width>
+      <height>13</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="7.920792079207921">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input</name>
+      <pv_name>$(P)$(M)_STEPSMOOTH_SP</pv_name>
+      <x>172</x>
+      <width>135</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="10.891089108910892">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Input</name>
+      <pv_name>$(P)$(M)_EGUAFTLIMIT_SP</pv_name>
+      <x>172</x>
+      <y>18</y>
+      <width>135</width>
+      <height>19</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="10.891089108910892">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Menu Button</name>
+      <pv_name>$(P)$(M)_LIMITDISABLE_CMD</pv_name>
+      <x>173</x>
+      <y>37</y>
+      <width>135</width>
+      <height>20</height>
+      <background_color>
+        <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <actions>
+      </actions>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>Limit disable</text>
+      <y>39</y>
+      <width>69</width>
+      <height>13</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="7.920792079207921">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P)$(M)_LIMITDISABLE_STATUS</pv_name>
+      <x>317</x>
+      <y>40</y>
+      <width>81</width>
+      <height>13</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="7.920792079207921">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <show_units>false</show_units>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Grouping Container</name>
+    <x>2</x>
+    <y>120</y>
+    <width>458</width>
+    <height>334</height>
+    <style>3</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <width>417</width>
+      <height>20</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_MTRTYPE_STATUS</pv_name>
+        <x>317</x>
+        <y>5</y>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="combo" version="2.0.0">
+        <name>Menu Button</name>
+        <pv_name>$(P)$(M)_MTRTYPE_CMD</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>20</height>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Motor type</text>
+        <y>3</y>
+        <width>97</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>20</y>
+      <width>450</width>
+      <height>20</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Main encoder</text>
+        <y>3</y>
+        <width>97</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="combo" version="2.0.0">
+        <name>Menu Button</name>
+        <pv_name>$(P)$(M)_MENCTYPE_CMD</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>20</height>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_MENCTYPE_STATUS</pv_name>
+        <x>317</x>
+        <y>5</y>
+        <width>150</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>40</y>
+      <width>450</width>
+      <height>18</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="combo" version="2.0.0">
+        <name>Menu Button</name>
+        <pv_name>$(P)$(M)_AENCTYPE_CMD</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>18</height>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Auxiliary encoder</text>
+        <y>3</y>
+        <width>97</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>59</y>
+      <width>407</width>
+      <height>18</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Wrong limit protection</text>
+        <y>2</y>
+        <width>89</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="choice" version="2.0.0">
+        <name>Choice Button</name>
+        <pv_name>$(P)$(M)_WLP_CMD</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>18</height>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <selected_color>
+          <color red="255" green="255" blue="255">
+          </color>
+        </selected_color>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <items>
+          <item>Choice 1</item>
+          <item>Choice 2</item>
+          <item>Choice 3</item>
+        </items>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_WLP_STATUS</pv_name>
+        <x>317</x>
+        <y>4</y>
+        <width>30</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_WLPACTIVE_STATUS</pv_name>
+        <x>349</x>
+        <y>4</y>
+        <width>58</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>76</y>
+      <width>375</width>
+      <height>18</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_ON_STATUS</pv_name>
+        <x>317</x>
+        <y>4</y>
+        <width>58</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="choice" version="2.0.0">
+        <name>Choice Button</name>
+        <pv_name>$(P)$(M)_ON_CMD</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>18</height>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <selected_color>
+          <color red="255" green="255" blue="255">
+          </color>
+        </selected_color>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <items>
+          <item>Choice 1</item>
+          <item>Choice 2</item>
+          <item>Choice 3</item>
+        </items>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Motor amplifier</text>
+        <y>3</y>
+        <width>89</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>94</y>
+      <width>398</width>
+      <height>18</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_AUTOONOFF_STATUS</pv_name>
+        <x>317</x>
+        <y>3</y>
+        <width>81</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="choice" version="2.0.0">
+        <name>Choice Button</name>
+        <pv_name>$(P)$(M)_AUTOONOFF_CMD</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>18</height>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <selected_color>
+          <color red="255" green="255" blue="255">
+          </color>
+        </selected_color>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <items>
+          <item>Choice 1</item>
+          <item>Choice 2</item>
+          <item>Choice 3</item>
+        </items>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Amp auto on/off</text>
+        <y>2</y>
+        <width>69</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>112</y>
+      <width>398</width>
+      <height>19</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_ONDELAY_MON</pv_name>
+        <x>317</x>
+        <y>3</y>
+        <width>81</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Input</name>
+        <pv_name>$(P)$(M)_ONDELAY_SP</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>19</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="10.891089108910892">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Amp on/brake off delay</text>
+        <y>2</y>
+        <width>69</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>130</y>
+      <width>398</width>
+      <height>19</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_OFFDELAY_MON</pv_name>
+        <x>317</x>
+        <y>3</y>
+        <width>81</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Input</name>
+        <pv_name>$(P)$(M)_OFFDELAY_SP</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>19</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="10.891089108910892">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Amp off delay</text>
+        <y>3</y>
+        <width>69</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>148</y>
+      <width>398</width>
+      <height>19</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_BRAKEONDELAY_MON</pv_name>
+        <x>317</x>
+        <y>3</y>
+        <width>81</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Input</name>
+        <pv_name>$(P)$(M)_BRAKEONDELAY_SP</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>19</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="10.891089108910892">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Brake on delay</text>
+        <y>3</y>
+        <width>69</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>166</y>
+      <width>417</width>
+      <height>19</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Motor brake on/off port</text>
+        <y>3</y>
+        <width>69</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Input</name>
+        <pv_name>$(P)$(M)_BRAKEPORT_SP</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>19</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="10.891089108910892">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_BRAKE_STATUS</pv_name>
+        <x>336</x>
+        <y>3</y>
+        <width>81</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_BRAKEPORT_MON</pv_name>
+        <x>317</x>
+        <y>3</y>
+        <width>10</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>184</y>
+      <width>398</width>
+      <height>18</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_AUTOBRAKE_STATUS</pv_name>
+        <x>317</x>
+        <y>3</y>
+        <width>81</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="choice" version="2.0.0">
+        <name>Choice Button</name>
+        <pv_name>$(P)$(M)_AUTOBRAKE_CMD</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>18</height>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <selected_color>
+          <color red="255" green="255" blue="255">
+          </color>
+        </selected_color>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <items>
+          <item>Choice 1</item>
+          <item>Choice 2</item>
+          <item>Choice 3</item>
+        </items>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Motor brake auto on/off</text>
+        <y>3</y>
+        <width>69</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>203</y>
+      <width>398</width>
+      <height>19</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Motor stop delay</text>
+        <y>3</y>
+        <width>69</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Input</name>
+        <pv_name>$(P)$(M)_STOPDELAY_SP</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>19</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="10.891089108910892">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_STOPDELAY_MON</pv_name>
+        <x>317</x>
+        <y>3</y>
+        <width>81</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>223</y>
+      <width>417</width>
+      <height>20</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_OFFONERR_STATUS</pv_name>
+        <x>317</x>
+        <y>4</y>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="combo" version="2.0.0">
+        <name>Menu Button</name>
+        <pv_name>$(P)$(M)_OFFONERR_CMD</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>20</height>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Motor off on error</text>
+        <y>3</y>
+        <width>97</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>241</y>
+      <width>375</width>
+      <height>19</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Error limit (cts)</text>
+        <y>4</y>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Input</name>
+        <pv_name>$(P)$(M)_ERRLIMIT_SP</pv_name>
+        <x>172</x>
+        <width>135</width>
+        <height>19</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="10.891089108910892">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_ERRLIMIT_MON</pv_name>
+        <x>317</x>
+        <y>5</y>
+        <width>58</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>262</y>
+      <width>375</width>
+      <height>15</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_ERR_MON</pv_name>
+        <x>317</x>
+        <y>2</y>
+        <width>58</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Error (cts)</text>
+        <width>97</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>280</y>
+      <width>398</width>
+      <height>14</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Encoder stall</text>
+        <width>69</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_ESTALL_STATUS</pv_name>
+        <x>317</x>
+        <y>1</y>
+        <width>81</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>297</y>
+      <width>398</width>
+      <height>19</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Encoder stall time (s)</text>
+        <y>3</y>
+        <width>69</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Input</name>
+        <pv_name>$(P)$(M)_ESTALLTIME_SP</pv_name>
+        <x>173</x>
+        <width>135</width>
+        <height>19</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="10.891089108910892">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_ESTALLTIME_MON</pv_name>
+        <x>317</x>
+        <y>1</y>
+        <width>81</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Grouping Container</name>
+      <y>315</y>
+      <width>398</width>
+      <height>19</height>
+      <style>3</style>
+      <foreground_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Encoder tolerance (cts)</text>
+        <y>3</y>
+        <width>69</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Input</name>
+        <pv_name>$(P)$(M)_ENC_TOLERANCE_SP</pv_name>
+        <x>173</x>
+        <width>135</width>
+        <height>19</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="10.891089108910892">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_51" red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P)$(M)_ENC_TOLERANCE_MON</pv_name>
+        <x>317</x>
+        <y>1</y>
+        <width>81</width>
+        <height>13</height>
+        <font>
+          <font family="Sans" style="REGULAR" size="7.920792079207921">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+          </color>
+        </background_color>
+        <format>1</format>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>$(P)$(M)_AENCTYPE_STATUS</pv_name>
+      <x>317</x>
+      <y>45</y>
+      <width>136</width>
+      <height>13</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="7.920792079207921">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Motor connected</text>
+    <x>2</x>
+    <y>83</y>
+    <width>97</width>
+    <height>13</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Motor axis</text>
+    <x>2</x>
+    <y>46</y>
+    <width>97</width>
+    <height>13</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Motorname</text>
+    <x>2</x>
+    <y>65</y>
+    <width>97</width>
+    <height>13</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Galil motor extras</text>
+    <x>116</x>
+    <y>20</y>
+    <width>193</width>
+    <height>18</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="10.891089108910892">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)$(M)_MCONN_STATUS</pv_name>
+    <x>174</x>
+    <y>83</y>
+    <width>120</width>
+    <height>13</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)$(M)_AXIS_STATUS</pv_name>
+    <x>174</x>
+    <y>47</y>
+    <width>58</width>
+    <height>13</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <show_units>false</show_units>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)$(M).NAME</pv_name>
+    <x>174</x>
+    <y>65</y>
+    <width>120</width>
+    <height>13</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)$(M)_LIMITCONSISTENT_STATUS</pv_name>
+    <x>174</x>
+    <y>101</y>
+    <width>120</width>
+    <height>13</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_54" red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="MEDM_COLOR_4" red="187" green="187" blue="187">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Motor/limits consistent</text>
+    <x>2</x>
+    <y>101</y>
+    <width>97</width>
+    <height>13</height>
+    <font>
+      <font family="Sans" style="REGULAR" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="MEDM_COLOR_14" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>

@@ -32,7 +32,7 @@
 # Calibrated target positions. Are displayed on GUIs along with current position.
 # TODO. These should be set to the calibrated motor positions once we figure them out.
 record(ai, "$(P)$(M)_home") {
-    field(VAL,"5")
+    field(VAL,"0")
 }
 record(ai, "$(P)$(M)_pos1") {
     field(VAL,"10")
