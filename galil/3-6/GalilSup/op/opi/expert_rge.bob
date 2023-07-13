@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
-  <name>motorx_rge</name>
-  <macros>
-    <IOC>IOC01:</IOC>
-    <M>A</M>
-    <P>DMC01:</P>
-  </macros>
+  <name>expert_rge</name>
   <x>500</x>
   <y>500</y>
   <width>452</width>
@@ -151,32 +146,6 @@
     <transparent>true</transparent>
     <actions>
     </actions>
-    <widget type="textupdate" version="2.0.0">
-      <name>Motor position check</name>
-      <pv_name>$(P)$(M).RBV</pv_name>
-      <x>5</x>
-      <width>112</width>
-      <height>29</height>
-      <foreground_color>
-        <color red="235" green="219" blue="178">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="80" green="73" blue="69">
-        </color>
-      </background_color>
-      <format>1</format>
-      <precision>2</precision>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
     <widget type="rectangle" version="2.0.0">
       <name>Rounded Rectangle_2</name>
       <macros>
@@ -216,31 +185,6 @@ $(pv_value)</tooltip>
         <color name="Read_Foreground" red="255" green="255" blue="255">
         </color>
       </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Lower limit</name>
-      <pv_name>$(P)$(M)_lowlimit</pv_name>
-      <x>20</x>
-      <y>53</y>
-      <width>120</width>
-      <height>19</height>
-      <foreground_color>
-        <color red="235" green="219" blue="178">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="80" green="73" blue="69">
-        </color>
-      </background_color>
-      <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
       <wrap_words>false</wrap_words>
       <actions>
@@ -308,31 +252,6 @@ $(pv_value)</tooltip>
         <color name="Read_Foreground" red="255" green="255" blue="255">
         </color>
       </background_color>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Higher Limit</name>
-      <pv_name>$(P)$(M)_highlimit</pv_name>
-      <x>20</x>
-      <y>109</y>
-      <width>120</width>
-      <height>19</height>
-      <foreground_color>
-        <color red="235" green="219" blue="178">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="80" green="73" blue="69">
-        </color>
-      </background_color>
-      <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
       <wrap_words>false</wrap_words>
       <actions>
@@ -428,6 +347,60 @@ $(pv_value)</tooltip>
           <pv_name>$(P)$(M).STAT</pv_name>
         </rule>
       </rules>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>pos7_1</name>
+      <pv_name>$(P)$(M)_lowlimit</pv_name>
+      <x>20</x>
+      <y>53</y>
+      <width>120</width>
+      <format>1</format>
+      <precision>2</precision>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>pos7_2</name>
+      <pv_name>$(P)$(M)_highlimit</pv_name>
+      <x>27</x>
+      <y>109</y>
+      <width>120</width>
+      <format>1</format>
+      <precision>2</precision>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Motor position calibration</name>
+      <pv_name>$(P)$(M).RBV</pv_name>
+      <x>5</x>
+      <width>112</width>
+      <height>29</height>
+      <visible>false</visible>
+      <format>1</format>
+      <precision>2</precision>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Motor position check</name>
+      <pv_name>$(P)$(M).RBV</pv_name>
+      <x>5</x>
+      <width>112</width>
+      <height>29</height>
+      <foreground_color>
+        <color red="235" green="219" blue="178">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="80" green="73" blue="69">
+        </color>
+      </background_color>
+      <format>1</format>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
       <border_color>
         <color red="0" green="128" blue="255">
         </color>
@@ -717,180 +690,14 @@ $(pv_value)</tooltip>
       </actions>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
-    <widget type="textupdate" version="2.0.0">
+    <widget type="textentry" version="3.0.0">
       <name>pos1</name>
       <pv_name>$(P)$(M)_pos1</pv_name>
       <x>40</x>
       <y>5</y>
       <width>102</width>
-      <foreground_color>
-        <color red="235" green="219" blue="178">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="80" green="73" blue="69">
-        </color>
-      </background_color>
+      <format>1</format>
       <precision>2</precision>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>pos2</name>
-      <pv_name>$(P)$(M)_pos2</pv_name>
-      <x>40</x>
-      <y>37</y>
-      <width>102</width>
-      <foreground_color>
-        <color red="235" green="219" blue="178">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="80" green="73" blue="69">
-        </color>
-      </background_color>
-      <precision>2</precision>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>pos3</name>
-      <pv_name>$(P)$(M)_pos3</pv_name>
-      <x>40</x>
-      <y>69</y>
-      <width>102</width>
-      <foreground_color>
-        <color red="235" green="219" blue="178">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="80" green="73" blue="69">
-        </color>
-      </background_color>
-      <precision>2</precision>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>pos4</name>
-      <pv_name>$(P)$(M)_pos4</pv_name>
-      <x>40</x>
-      <y>101</y>
-      <width>102</width>
-      <foreground_color>
-        <color red="235" green="219" blue="178">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="80" green="73" blue="69">
-        </color>
-      </background_color>
-      <precision>2</precision>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>pos5</name>
-      <pv_name>$(P)$(M)_pos5</pv_name>
-      <x>40</x>
-      <y>133</y>
-      <width>102</width>
-      <foreground_color>
-        <color red="235" green="219" blue="178">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="80" green="73" blue="69">
-        </color>
-      </background_color>
-      <precision>2</precision>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>pos6</name>
-      <pv_name>$(P)$(M)_pos6</pv_name>
-      <x>40</x>
-      <y>165</y>
-      <width>102</width>
-      <foreground_color>
-        <color red="235" green="219" blue="178">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="80" green="73" blue="69">
-        </color>
-      </background_color>
-      <precision>2</precision>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>pos7</name>
-      <pv_name>$(P)$(M)_pos7</pv_name>
-      <x>40</x>
-      <y>197</y>
-      <width>102</width>
-      <foreground_color>
-        <color red="235" green="219" blue="178">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color red="80" green="73" blue="69">
-        </color>
-      </background_color>
-      <precision>2</precision>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
     </widget>
     <widget type="led" version="2.0.0">
       <name>At pos2</name>
@@ -1000,6 +807,60 @@ $(pv_value)</tooltip>
       </actions>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>pos2</name>
+      <pv_name>$(P)$(M)_pos2</pv_name>
+      <x>40</x>
+      <y>37</y>
+      <width>102</width>
+      <format>1</format>
+      <precision>2</precision>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>pos3</name>
+      <pv_name>$(P)$(M)_pos3</pv_name>
+      <x>40</x>
+      <y>69</y>
+      <width>102</width>
+      <format>1</format>
+      <precision>2</precision>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>pos4</name>
+      <pv_name>$(P)$(M)_pos4</pv_name>
+      <x>40</x>
+      <y>101</y>
+      <width>102</width>
+      <format>1</format>
+      <precision>2</precision>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>pos5</name>
+      <pv_name>$(P)$(M)_pos5</pv_name>
+      <x>40</x>
+      <y>133</y>
+      <width>102</width>
+      <format>1</format>
+      <precision>2</precision>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>pos6</name>
+      <pv_name>$(P)$(M)_pos6</pv_name>
+      <x>40</x>
+      <y>165</y>
+      <width>102</width>
+      <format>1</format>
+      <precision>2</precision>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>pos7</name>
+      <pv_name>$(P)$(M)_pos7</pv_name>
+      <x>40</x>
+      <y>197</y>
+      <width>102</width>
+      <format>1</format>
+      <precision>2</precision>
+    </widget>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>Motor menus</name>
@@ -1039,16 +900,6 @@ $(pv_value)</tooltip>
         </macros>
         <target>window</target>
         <description>Amp</description>
-      </action>
-      <action type="open_display">
-        <file>expert_rge.bob</file>
-        <macros>
-          <IOC>${IOC}</IOC>
-          <M>${M}</M>
-          <P>${P}</P>
-        </macros>
-        <target>window</target>
-        <description>Expert</description>
       </action>
     </actions>
     <text>[]</text>
